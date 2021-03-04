@@ -1,0 +1,74 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        
+
+        {
+            "name": "Launch Main",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ],
+            "preLaunchTask": "Build Main"
+        },
+        {
+            "name": "Launch Main Segvio",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/main_segvio.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                },
+                {
+                   "text": "set print elements 0"
+                }
+            ],
+            "preLaunchTask": "Build Main Segvio"
+        },
+        {
+            "name": "Launch Trie Segvio",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/trie.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                },
+                {
+                   "text": "set print elements 0"
+                }
+            ],
+            "preLaunchTask": "Build Trie Segvio"
+        }
+    ]
+}
